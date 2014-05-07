@@ -14,7 +14,7 @@ public class Game extends SurfaceView implements Runnable{
 	private Bitmap backgroundAumentado;
 	private ScreenHelper screenHelper;
 	private Bird bird;
-	private Pipe pipe;
+	private Pipes pipes;
 
 	public Game(MainActivity activity) {
 		super(activity);
@@ -37,7 +37,7 @@ public class Game extends SurfaceView implements Runnable{
 	
 	private void init() {
 		bird = new Bird(screenHelper);
-		pipe = new Pipe(screenHelper);
+		pipes = new Pipes(screenHelper);
 	}
 
 	@Override
@@ -51,8 +51,7 @@ public class Game extends SurfaceView implements Runnable{
 			canvas.drawBitmap(backgroundAumentado, 0, 0, null);
 			bird.drawOn(canvas);
 			bird.cai();
-			pipe.drawOn(canvas);
-			pipe.move();
+			pipes.drawOn(canvas);
 			
 			holder.unlockCanvasAndPost(canvas);
 		}

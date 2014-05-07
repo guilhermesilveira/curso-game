@@ -9,13 +9,14 @@ public class Pipe {
 	private ScreenHelper helper;
 	private int tamanhoDoPipe = 250;
 	private int larguraDoPipe = 100;
-	private float posicaoInicial;
+	private int posicaoInicial;
 
-	public Pipe(ScreenHelper helper) {
+	public Pipe(ScreenHelper helper, int posicaoInicial) {
 		this.helper = helper;
+		this.posicaoInicial = posicaoInicial;
+		
 		paint = new Paint();
 		paint.setColor(0xFF00FF00);
-		this.posicaoInicial = helper.getWidth();
 	}
 	
 	public void drawOn(Canvas canvas) {
