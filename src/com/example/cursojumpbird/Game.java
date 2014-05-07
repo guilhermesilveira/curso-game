@@ -52,6 +52,7 @@ public class Game extends SurfaceView implements Runnable{
 			bird.drawOn(canvas);
 			bird.cai();
 			pipe.drawOn(canvas);
+			pipe.move();
 			
 			holder.unlockCanvasAndPost(canvas);
 		}

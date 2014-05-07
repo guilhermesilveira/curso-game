@@ -20,4 +20,8 @@ public class ScreenHelper {
 		return metrics.heightPixels;
 	}
 
+	public float getWidth() {
+		return metrics.widthPixels;
+	}
+
 }
