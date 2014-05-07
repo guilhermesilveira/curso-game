@@ -2,9 +2,12 @@ package com.example.cursojumpbird;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnTouchListener;
 import android.widget.FrameLayout;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements OnTouchListener{
 
 	private Game game;
 
@@ -32,5 +35,11 @@ public class MainActivity extends Activity {
 		super.onResume();
 		game.resume();
 		new Thread(game).start();
+	}
+
+	@Override
+	public boolean onTouch(View v, MotionEvent event) {
+		game.jumpBird();
+		return false;
 	}
 }
