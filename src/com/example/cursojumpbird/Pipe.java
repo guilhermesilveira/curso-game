@@ -28,4 +28,16 @@ public class Pipe {
 		posicaoInicial -= 5;
 	}
 
+	public int getPosicaoAtual() {
+		return posicaoInicial;
+	}
+
+	public void setX(int posicao) {
+		posicaoInicial = posicao;
+	}
+
+	public int getLargura() {
+		return larguraDoPipe;
+	}
+
 }
