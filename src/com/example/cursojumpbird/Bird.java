@@ -7,21 +7,29 @@ public class Bird {
 
 	private int alturaDaBolinha;
 	private Paint paint = new Paint();
+	private ScreenHelper helper;
+	private int raioDaBolinha;
 	
-	public Bird() {
+	public Bird(ScreenHelper helper) {
+		this.helper = helper;
 		paint.setColor(0xFFFF0000);
 		alturaDaBolinha = 100;
+		raioDaBolinha = 50;
 	}
 	
 	public void drawOn(Canvas canvas) {
-		canvas.drawCircle(100, alturaDaBolinha, 50, paint);
+		canvas.drawCircle(100, alturaDaBolinha, raioDaBolinha, paint);
 	}
 	
 	public void cai() {
-		alturaDaBolinha += 5;
+		if(alturaDaBolinha < helper.getHeight() - raioDaBolinha) {
+			alturaDaBolinha += 5;
+		}
 	}
 
 	public void pula() {
-		alturaDaBolinha -= 150;
+		if(alturaDaBolinha > raioDaBolinha) {
+			alturaDaBolinha -= 150;
+		}
 	}
 }

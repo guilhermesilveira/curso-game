@@ -35,7 +35,7 @@ public class Game extends SurfaceView implements Runnable{
 	}
 	
 	private void init() {
-		bird = new Bird();
+		bird = new Bird(screenHelper);
 	}
 
 	@Override
