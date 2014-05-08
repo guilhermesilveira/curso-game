@@ -13,8 +13,7 @@ public class Game extends SurfaceView implements Runnable{
 	private final Canvas canvas;
 	private final Bitmap backgroundAumentado;
 	private ScreenHelper screenHelper;
-	private Bird bird;
-	private Pipes pipes;
+	private GameEngine engine;
 
 	public Game(MainActivity activity) {
 		super(activity);
@@ -22,31 +21,17 @@ public class Game extends SurfaceView implements Runnable{
 		screenHelper = new ScreenHelper(activity);
 		setOnTouchListener(activity);
 		this.backgroundAumentado = criaBackground();
-		init();
+		engine = new GameEngine(screenHelper);
 	}
 	
-	private Bitmap criaBackground() {
-		Bitmap back = BitmapFactory.decodeResource(getResources(),R.drawable.back);
-		return Bitmap.createScaledBitmap(back, back.getWidth(), screenHelper.getHeight(), false);
-	}
-	
-	private void init() {
-		bird = new Bird(screenHelper);
-		pipes = new Pipes(screenHelper);
-	}
-
 	@Override
 	public void run() {
 		while(isRunning) {
 			if(!holder.getSurface().isValid()) continue;
 			
 			canvas = holder.lockCanvas();
+			engine.nextRound(canvas);
 			
-			// Aqui desenharemos nossos elementos do jogo...
-			canvas.drawBitmap(backgroundAumentado, 0, 0, null);
-			bird.drawOn(canvas);
-			bird.cai();
-			pipes.drawOn(canvas);
 			
 			holder.unlockCanvasAndPost(canvas);
 		}
@@ -61,7 +46,7 @@ public class Game extends SurfaceView implements Runnable{
 	}
 
 	public void jumpBird() {
-		bird.pula();
+		engine.pula();
 	}
 
 }
