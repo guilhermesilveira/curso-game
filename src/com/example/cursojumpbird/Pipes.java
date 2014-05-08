@@ -9,7 +9,7 @@ public class Canos {
 
 	private static final int DISTANCIA_ENTRE_PIPES = 250;
 	private final List<Pipe> pipes = new ArrayList<Pipe>();
-	private int maximo = 0;
+	private int ultimoCano = 0;
 	
 	public Canos(ScreenHelper helper) {
 		criaCenarioComCanos(5, helper.getWidth());
@@ -19,6 +19,7 @@ public class Canos {
 		for(int i=0; i< quantidade; i++) {
 			posicaoAtual += DISTANCIA_ENTRE_PIPES;
 			pipes.add(new Pipe(helper, posicaoAtual));
+			ultimoCano = posicaoAtual;
 		}
 	}
 
@@ -35,13 +36,16 @@ public class Canos {
 	public void voltaProFimSeSairDaTela() {
 		for (Pipe pipe : pipes) {
 			if(pipe.getPosicaoAtual() < 0 - pipe.getLargura()) {
-				for (Pipe p : pipes) {
-					if(p.getPosicaoAtual() > maximo) {
-						maximo = p.getPosicaoAtual();
-					}
-				}
-				pipe.setX(maximo + DISTANCIA_ENTRE_PIPES);
+				pipe.setX(getMaximo() + DISTANCIA_ENTRE_PIPES);
 			}
 		}
+	}
+	private getMaximo() {
+		for (Pipe p : pipes) {
+			if(p.getPosicaoAtual() > maximo) {
+				maximo = p.getPosicaoAtual();
+			}
+			}
+
 	}
 }
