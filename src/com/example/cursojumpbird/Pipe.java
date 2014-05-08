@@ -5,7 +5,7 @@ import android.graphics.Paint;
 
 public class Pipe {
 	
-	private final Paint roxo= new Paint();
+	private final static Paint roxo = Cores.roxo();
 	private ... ScreenHelper helper;
 	private ... int tamanhoDoPipe = 250;
 	private int larguraDoPipe = 100;
@@ -14,8 +14,6 @@ public class Pipe {
 	public Pipe(ScreenHelper helper, int posicaoInicial) {
 		this.helper = helper;
 		this.posicaoInicial = posicaoInicial;
-		
-		roxo.setColor(0xFF00FF00);
 	}
 	
 	public void drawOn(Canvas canvas) {
