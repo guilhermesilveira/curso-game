@@ -5,9 +5,9 @@ import android.graphics.Paint;
 
 public class Pipe {
 	
-	private Paint paint;
-	private ScreenHelper helper;
-	private int tamanhoDoPipe = 250;
+	private final Paint paint= new Paint();
+	private ... ScreenHelper helper;
+	private ... int tamanhoDoPipe = 250;
 	private int larguraDoPipe = 100;
 	private int posicaoInicial;
 
@@ -15,7 +15,6 @@ public class Pipe {
 		this.helper = helper;
 		this.posicaoInicial = posicaoInicial;
 		
-		paint = new Paint();
 		paint.setColor(0xFF00FF00);
 	}
 	
