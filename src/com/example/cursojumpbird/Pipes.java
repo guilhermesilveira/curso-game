@@ -10,13 +10,12 @@ public class Canos {
 	private static final int DISTANCIA_ENTRE_PIPES = 250;
 	private final List<Pipe> pipes = new ArrayList<Pipe>();
 	private ... ScreenHelper helper;
-	private int posicaoInicial;
 	private int maximo = 0;
 	
 	public Canos(ScreenHelper helper) {
 		this.helper = helper;
 		
-		posicaoInicial = helper.getWidth();
+		int posicaoInicial = helper.getWidth();
 		for(int i=0; i<5; i++) {
 			posicaoInicial += DISTANCIA_ENTRE_PIPES;
 			pipes.add(new Pipe(helper, posicaoInicial));
