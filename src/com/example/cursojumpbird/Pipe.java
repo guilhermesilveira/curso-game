@@ -23,7 +23,7 @@ public class Pipe {
 	}
 	
 	public void move() {
-		posicaoInicial -= 5;
+		posicaoInicial -= extrair estatico esse numero?;
 	}
 
 	public int getPosicaoAtual() {
