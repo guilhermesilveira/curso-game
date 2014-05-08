@@ -9,7 +9,7 @@ import android.view.SurfaceView;
 public class Game extends SurfaceView implements Runnable{
 
 	private SurfaceHolder holder;
-	private boolean isRunning;
+	private boolean isRunning = true;
 	private final Canvas canvas;
 	private Bitmap backgroundAumentado;
 	private ScreenHelper screenHelper;
@@ -19,15 +19,10 @@ public class Game extends SurfaceView implements Runnable{
 	public Game(MainActivity activity) {
 		super(activity);
 		holder = getHolder();
-		isRunning = true;
 		screenHelper = new ScreenHelper(activity);
-		
 		setOnTouchListener(activity);
-		
 		criaBackground();
-		
 		init();
-		
 	}
 	
 	private void criaBackground() {
