@@ -15,10 +15,10 @@ public class Canos {
 		criaCenarioComCanos(5, helper.getWidth());
 	}
 	
-	private void criaCenarioComCanos(int quantidade, int posicaoInicial) {
+	private void criaCenarioComCanos(int quantidade, int posicaoAtual) {
 		for(int i=0; i< quantidade; i++) {
-			posicaoInicial += DISTANCIA_ENTRE_PIPES;
-			pipes.add(new Pipe(helper, posicaoInicial));
+			posicaoAtual += DISTANCIA_ENTRE_PIPES;
+			pipes.add(new Pipe(helper, posicaoAtual));
 		}
 	}
 
