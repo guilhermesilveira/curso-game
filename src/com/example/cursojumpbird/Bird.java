@@ -18,13 +18,13 @@ public class Bird {
 	}
 	
 	public void cai() {
-		if(alturaDaBolinha < helper.getHeight() - raioDaBolinha) {
+		if(naoBateuNoChao()) {
 			alturaDaBolinha += 5;
 		}
 	}
 
 	public void pula() {
-		if(alturaDaBolinha > raioDaBolinha) {
+		if(naoBateuNoTopo()) {
 			alturaDaBolinha -= 150;
 		}
 	}
