@@ -7,8 +7,8 @@ public class Pipe {
 	
 	private final static Paint roxo = Cores.roxo();
 	private ... ScreenHelper dimensoes;
-	private ... int tamanhoDoPipe = 250;
-	private int larguraDoPipe = 100;
+	private ... int tamanho = 250;
+	private int largura = 100;
 	private int posicao;
 
 	public Pipe(ScreenHelper helper, int posicaoInicial) {
