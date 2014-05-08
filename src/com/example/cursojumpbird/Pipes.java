@@ -19,8 +19,8 @@ public class Canos {
 		for(int i=0; i< quantidade; i++) {
 			posicaoAtual += DISTANCIA_ENTRE_PIPES;
 			pipes.add(new Pipe(helper, posicaoAtual));
-			ultimoCano = posicaoAtual;
 		}
+			ultimoCano = posicaoAtual;
 	}
 
 	public void drawOn(Canvas canvas) {
