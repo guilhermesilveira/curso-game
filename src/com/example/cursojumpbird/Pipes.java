@@ -5,7 +5,7 @@ import java.util.List;
 
 import android.graphics.Canvas;
 
-public class Pipes {
+public class Canos {
 
 	private static final int DISTANCIA_ENTRE_PIPES = 250;
 	private final List<Pipe> pipes = new ArrayList<Pipe>();
@@ -13,7 +13,7 @@ public class Pipes {
 	private int posicaoInicial;
 	private int maximo = 0;
 	
-	public Pipes(ScreenHelper helper) {
+	public Canos(ScreenHelper helper) {
 		this.helper = helper;
 		
 		posicaoInicial = helper.getWidth();
