@@ -30,10 +30,6 @@ public class Pipe {
 		return posicaoInicial;
 	}
 
-	public void setX(int posicao) {
-		posicaoInicial = posicao;
-	}
-
 	public int getLargura() {
 		return larguraDoPipe;
 	}
