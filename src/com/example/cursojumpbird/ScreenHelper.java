@@ -7,12 +7,11 @@ import android.view.WindowManager;
 
 public class ScreenHelper {
 
-	private DisplayMetrics metrics;
+	private DisplayMetrics metrics = new DisplayMetrics();;
 
 	public ScreenHelper(Context context) {
 		WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
 		Display display = wm.getDefaultDisplay();
-		metrics = new DisplayMetrics();
 		display.getMetrics(metrics);
 	}
 	
