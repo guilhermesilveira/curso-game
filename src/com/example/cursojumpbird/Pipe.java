@@ -9,7 +9,7 @@ public class Pipe {
 	private ... ScreenHelper dimensoes;
 	private ... int tamanhoDoPipe = 250;
 	private int larguraDoPipe = 100;
-	private int posicaoInicial;
+	private int posicao;
 
 	public Pipe(ScreenHelper helper, int posicaoInicial) {
 		this.helper = helper;
