@@ -8,8 +8,8 @@ import android.graphics.Canvas;
 public class Pipes {
 
 	private static final int DISTANCIA_ENTRE_PIPES = 250;
-	private List<Pipe> pipes = new ArrayList<Pipe>();
-	private ScreenHelper helper;
+	private final List<Pipe> pipes = new ArrayList<Pipe>();
+	private ... ScreenHelper helper;
 	private int posicaoInicial;
 	private int maximo = 0;
 	
