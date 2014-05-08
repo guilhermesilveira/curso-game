@@ -6,7 +6,7 @@ import android.graphics.Paint;
 public class Pipe {
 	
 	private final static Paint roxo = Cores.roxo();
-	private ... ScreenHelper helper;
+	private ... ScreenHelper dimensoes;
 	private ... int tamanhoDoPipe = 250;
 	private int larguraDoPipe = 100;
 	private int posicaoInicial;
