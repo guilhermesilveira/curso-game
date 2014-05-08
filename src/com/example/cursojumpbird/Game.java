@@ -11,7 +11,7 @@ public class Game extends SurfaceView implements Runnable{
 	private SurfaceHolder holder;
 	private boolean isRunning = true;
 	private final Canvas canvas;
-	private Bitmap backgroundAumentado;
+	private final Bitmap backgroundAumentado;
 	private ScreenHelper screenHelper;
 	private Bird bird;
 	private Pipes pipes;
@@ -21,13 +21,13 @@ public class Game extends SurfaceView implements Runnable{
 		holder = getHolder();
 		screenHelper = new ScreenHelper(activity);
 		setOnTouchListener(activity);
-		criaBackground();
+		this.backgroundAumentado = criaBackground();
 		init();
 	}
 	
-	private void criaBackground() {
+	private Bitmap criaBackground() {
 		Bitmap back = BitmapFactory.decodeResource(getResources(),R.drawable.back);
-		this.backgroundAumentado = Bitmap.createScaledBitmap(back, back.getWidth(), screenHelper.getHeight(), false);
+		return Bitmap.createScaledBitmap(back, back.getWidth(), screenHelper.getHeight(), false);
 	}
 	
 	private void init() {
