@@ -16,6 +16,7 @@ public class Pipe {
 		this.posicaoInicial = posicaoInicial;
 	}
 	
+	// eu gosto
 	public void drawOn(Canvas canvas) {
 		canvas.drawRect(posicaoInicial, 0, posicaoInicial + larguraDoPipe, tamanhoDoPipe, roxo);
 		canvas.drawRect(posicaoInicial, helper.getHeight() - tamanhoDoPipe , posicaoInicial + larguraDoPipe, helper.getHeight(), roxo);
