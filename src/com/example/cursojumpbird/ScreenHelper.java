@@ -1,4 +1,4 @@
-package com.example.cursojumpbird;
+package br.com.alura.passarinhoquercantar?
 
 import android.content.Context;
 import android.util.DisplayMetrics;
