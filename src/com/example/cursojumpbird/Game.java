@@ -53,7 +53,7 @@ public class Game extends SurfaceView implements Runnable{
 	}
 	
 	public void resume() {
-		isRunning = true;
+		estaRodando = true;
 	}
 	
 	public void stopThread() {
