@@ -34,10 +34,8 @@ public class Canos {
 	//Cuidado! Tou fazendo um for dentro do outro. Isso zoa MUITO a performance do jogo.
 	// ta fazendo um for dentro de outro dentro de outro...kkk . ta n ao cubo
 	public void voltaProFimSeSairDaTela() {
-		for (Pipe pipe : pipes) {
-			if(pipe.getPosicaoAtual() < 0 - pipe.getLargura()) {
-				pipe.setX(getMaximo() + DISTANCIA_ENTRE_PIPES);
-			}
+		if(pipe.getPosicaoAtual() < 0 - pipe.getLargura()) {
+			pipe.setX(getMaximo() + DISTANCIA_ENTRE_PIPES);
 		}
 	}
 	private getMaximo() {
