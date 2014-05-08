@@ -5,9 +5,9 @@ import android.graphics.Paint;
 
 public class Bird {
 
-	private int alturaDaBolinha = 100;
+	private int altura = 100;
 	private ScreenHelper helper;
-	private int raioDaBolinha = 50;
+	private static final int RAIO = 50;
 	
 	public Bird(ScreenHelper helper) {
 		this.helper = helper;
