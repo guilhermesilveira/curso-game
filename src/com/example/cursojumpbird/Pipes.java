@@ -27,21 +27,16 @@ public class Canos {
 		for (Pipe pipe : pipes) {
 			pipe.move();
 			pipe.drawOn(canvas);
-			voltaProFimSeSairDaTela();
+			ultimoCano -= Cano.MOVIMENTO; // (5 né?)
 		}
+		voltaProFimSeSairDaTela();
 	}
 
-	//Cuidado! Tou fazendo um for dentro do outro. Isso zoa MUITO a performance do jogo.
-	// ta fazendo um for dentro de outro dentro de outro...kkk . ta n ao cubo
 	public void voltaProFimSeSairDaTela() {
-		if(pipe.saiuDaTela()) {
-			pipe.setX(getMaximo() + DISTANCIA_ENTRE_PIPES);
-		}
-	}
-	private getMaximo() {
-		for (Pipe p : pipes) {
-			if(p.getPosicaoAtual() > maximo) {
-				maximo = p.getPosicaoAtual();
+		for (Pipe pipe : pipes) {
+			if(pipe.saiuDaTela()) {
+				ultimoCano = ultimoCano + DISTANCIA_ENTRE_PIPES; 
+				pipe.setX(ultimoCano);
 			}
 		}
 	}
