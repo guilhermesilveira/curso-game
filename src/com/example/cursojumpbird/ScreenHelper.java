@@ -7,20 +7,20 @@ import android.view.WindowManager;
 
 public class ScreenHelper {
 
-	private final DisplayMetrics metrics = new DisplayMetrics();;
+	private final DisplayMetrics resolucao = new DisplayMetrics();;
 
 	public ScreenHelper(Context context) {
 		WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
 		Display display = wm.getDefaultDisplay();
-		display.getMetrics(metrics);
+		display.getMetrics(resolucao);
 	}
 	
 	public int getHeight() {
-		return metrics.heightPixels;
+		return resolucao.heightPixels;
 	}
 
 	public int getWidth() {
-		return metrics.widthPixels;
+		return resolucao.widthPixels;
 	}
 
 }
