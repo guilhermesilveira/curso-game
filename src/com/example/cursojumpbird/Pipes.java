@@ -12,9 +12,11 @@ public class Canos {
 	private int maximo = 0;
 	
 	public Canos(ScreenHelper helper) {
-		criaCenarioComCanos(5);
-		int posicaoInicial = helper.getWidth();
-		for(int i=0; i<5; i++) {
+		criaCenarioComCanos(5, helper.getWidth());
+	}
+	
+	private void criaCenarioComCanos(int quantidade, int posicaoInicial) {
+		for(int i=0; i< quantidade; i++) {
 			posicaoInicial += DISTANCIA_ENTRE_PIPES;
 			pipes.add(new Pipe(helper, posicaoInicial));
 		}
