@@ -10,7 +10,7 @@ public class Game extends SurfaceView implements Runnable{
 
 	private SurfaceHolder holder;
 	private boolean isRunning;
-	private Canvas canvas;
+	private final Canvas canvas;
 	private Bitmap backgroundAumentado;
 	private ScreenHelper screenHelper;
 	private Bird bird;
