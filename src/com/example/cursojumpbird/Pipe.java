@@ -5,7 +5,7 @@ import android.graphics.Paint;
 
 public class Pipe {
 	
-	private final Paint paint= new Paint();
+	private final Paint roxo= new Paint();
 	private ... ScreenHelper helper;
 	private ... int tamanhoDoPipe = 250;
 	private int larguraDoPipe = 100;
@@ -15,12 +15,12 @@ public class Pipe {
 		this.helper = helper;
 		this.posicaoInicial = posicaoInicial;
 		
-		paint.setColor(0xFF00FF00);
+		roxo.setColor(0xFF00FF00);
 	}
 	
 	public void drawOn(Canvas canvas) {
-		canvas.drawRect(posicaoInicial, 0, posicaoInicial + larguraDoPipe, tamanhoDoPipe, paint);
-		canvas.drawRect(posicaoInicial, helper.getHeight() - tamanhoDoPipe , posicaoInicial + larguraDoPipe, helper.getHeight(), paint);
+		canvas.drawRect(posicaoInicial, 0, posicaoInicial + larguraDoPipe, tamanhoDoPipe, roxo);
+		canvas.drawRect(posicaoInicial, helper.getHeight() - tamanhoDoPipe , posicaoInicial + larguraDoPipe, helper.getHeight(), roxo);
 	}
 	
 	public void move() {
